@@ -1,0 +1,54 @@
+.task-item {
+  padding: 20px;
+  cursor: pointer;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.task-item:hover .task-trash {
+  visibility: visible;
+  transition: all 0.4;
+}
+.task-trash {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  gap: 1rem;
+}
+
+.task-trash p {
+  font-size: 25px;
+}
+
+.task-trash svg {
+  width: 30px;
+}
+
+.task-content {
+  margin-top: 0;
+}
+.task-name {
+  color: black;
+}
+.task-description {
+  color: grey;
+}
+
+.task-category {
+  font-weight: 600;
+  border-top: 1px solid black;
+  padding: 1rem 0;
+}
+.low {
+  border: 3px solid green;
+}
+
+.medium {
+  border: 3px solid orange;
+}
+.high {
+  border: 3px solid red;
+}

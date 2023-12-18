@@ -1,0 +1,49 @@
+.filters {
+  margin-top: 1rem;
+}
+.form {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.form label {
+  font-size: 20px;
+}
+.form select {
+  border: none;
+  border-bottom: 1px solid #2e2e2e;
+  font-size: 15px;
+  padding: 5px;
+}
+
+.tasks-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-task-btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  padding: 1rem;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.add-task-btn svg {
+  width: 2rem;
+}
+
+.tasks-wrapper {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+  overflow: auto;
+}

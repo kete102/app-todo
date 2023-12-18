@@ -1,0 +1,43 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .app-logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.app-logo svg {
+  width: 5rem;
+  stroke: blue;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+
+.profile img {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.header svg {
+  cursor: pointer;
+  width: 2rem;
+}
