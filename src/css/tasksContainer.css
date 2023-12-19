@@ -52,3 +52,19 @@
   gap: 16px;
   overflow: auto;
 }
+
+.dropdown-menu {
+  display: none;
+  border: 3px solid black;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  margin-top: 10px;
+  border-radius: 15px;
+}
+
+.dropdown-form {
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+}

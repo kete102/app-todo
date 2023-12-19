@@ -4,21 +4,48 @@
       Add Task
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        class="icon icon-tabler icon-tabler-plus"
+        class="icon icon-tabler icon-tabler-caret-down"
         width="44"
         height="44"
         viewBox="0 0 24 24"
-        stroke-width="2"
+        stroke-width="1.5"
         stroke="#000000"
         fill="none"
         stroke-linecap="round"
         stroke-linejoin="round"
       >
         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-        <path d="M12 5l0 14" />
-        <path d="M5 12l14 0" />
+        <path d="M6 10l6 6l6 -6h-12" />
       </svg>
     </button>
+    <div class="dropdown-menu">
+      <form class="dropdown-form">
+        <label for="task-name">Name:</label>
+        <input type="text" name="task-name" id="task-name" />
+        <label for="task-description">Description:</label>
+        <input type="text" name="task-description" id="task-description" />
+        <div class="form-select">
+          <div class="form-selecto-group">
+            <label for="priority">Priority:</label>
+            <select id="priority">
+              <option value="default">Select one</option>
+              <option value="low">Low</option>
+              <option value="meidum">Medium</option>
+              <option value="high">High</option>
+            </select>
+          </div>
+          <div class="form-selecto-group">
+            <label for="category">Category:</label>
+            <select id="category">
+              <option value="default">Select one</option>
+              <option value="personal">Personal</option>
+              <option value="work">Work</option>
+              <option value="apoiments">Apoiments</option>
+            </select>
+          </div>
+        </div>
+      </form>
+    </div>
   </div>
   <div class="filters">
     <form class="form">
