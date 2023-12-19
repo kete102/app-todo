@@ -20,30 +20,31 @@
     </button>
     <div class="dropdown-menu">
       <form class="dropdown-form">
-        <label for="task-name">Name:</label>
-        <input type="text" name="task-name" id="task-name" />
-        <label for="task-description">Description:</label>
-        <input type="text" name="task-description" id="task-description" />
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="task-name" required />
+        <label for="description">Description:</label>
+        <input type="text" name="description" id="task-description" required />
         <div class="form-select">
           <div class="form-selecto-group">
             <label for="priority">Priority:</label>
-            <select id="priority">
+            <select name="priority" id="priority" required>
               <option value="default">Select one</option>
               <option value="low">Low</option>
-              <option value="meidum">Medium</option>
+              <option value="medium">Medium</option>
               <option value="high">High</option>
             </select>
           </div>
           <div class="form-selecto-group">
             <label for="category">Category:</label>
-            <select id="category">
+            <select name="category" id="category" required>
               <option value="default">Select one</option>
               <option value="personal">Personal</option>
               <option value="work">Work</option>
-              <option value="apoiments">Apoiments</option>
+              <option value="appointments">Appointments</option>
             </select>
           </div>
         </div>
+        <button class="submit-btn" type="">Add</button>
       </form>
     </div>
   </div>
@@ -54,7 +55,7 @@
         <select id="priority">
           <option value="default">Select one</option>
           <option value="low">Low</option>
-          <option value="meidum">Medium</option>
+          <option value="medium">Medium</option>
           <option value="high">High</option>
         </select>
       </div>
@@ -64,7 +65,7 @@
           <option value="default">Select one</option>
           <option value="personal">Personal</option>
           <option value="work">Work</option>
-          <option value="apoiments">Apoiments</option>
+          <option value="appointments">Appointments</option>
         </select>
       </div>
     </form>

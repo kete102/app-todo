@@ -7,12 +7,6 @@ export default () => {
   divElement.classList.add("tasks-container");
   divElement.innerHTML = view;
   const tasksWrapper = divElement.querySelector(".tasks-wrapper");
-  tasksWrapper.appendChild(Task("low"));
-  tasksWrapper.appendChild(Task("medium"));
-  tasksWrapper.appendChild(Task("high"));
-  tasksWrapper.appendChild(Task("medium"));
-  tasksWrapper.appendChild(Task("high"));
-  tasksWrapper.appendChild(Task("low"));
 
   /* Drop Down Menu*/
   const dropDownMenu = divElement.querySelector(".dropdown-menu");
@@ -20,17 +14,25 @@ export default () => {
 
   const toggleDropDownMenu = () => {
     console.log("toogleVisibility");
-    if (dropDownMenu.style.display == "none") {
+    if (dropDownMenu.style.display === "none") {
       dropDownMenu.style.display = "block";
-      dropDownMenu.classList.add("visible");
     } else {
       dropDownMenu.style.display = "none";
-      dropDownMenu.classList.remove("visible");
     }
   };
 
   addTaskBtn.addEventListener("click", () => {
     toggleDropDownMenu();
+  });
+
+  const addTaskForm = divElement.querySelector(".dropdown-form");
+  addTaskForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const { name, description, priority, category } = Object.fromEntries(
+      new FormData(e.target),
+    );
+    tasksWrapper.appendChild(Task(name, description, priority, category));
+    addTaskForm.reset();
   });
 
   return divElement;

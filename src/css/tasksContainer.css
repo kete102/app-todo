@@ -54,10 +54,7 @@
 }
 
 .dropdown-menu {
-  display: none;
   border: 3px solid black;
-  display: flex;
-  flex-direction: column;
   padding: 2rem;
   margin-top: 10px;
   border-radius: 15px;
@@ -67,4 +64,11 @@
   display: flex;
   flex-direction: column;
   width: 30rem;
+}
+
+.submit-btn {
+  margin-top: 10px;
+  width: 10rem;
+  padding: 1rem;
+  font-size: x-large;
 }
