@@ -1,3 +1,8 @@
+.tasks-container {
+  overflow-y: auto;
+  max-height: 35rem;
+}
+
 .filters {
   margin-top: 1rem;
 }

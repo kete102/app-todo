@@ -4,6 +4,7 @@ import "../css/tasksContainer.css";
 
 export default () => {
   const divElement = document.createElement("div");
+  divElement.classList.add("tasks-container");
   divElement.innerHTML = view;
   const tasksWrapper = divElement.querySelector(".tasks-wrapper");
   tasksWrapper.appendChild(Task("low"));
