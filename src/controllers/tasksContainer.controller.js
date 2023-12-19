@@ -10,11 +10,11 @@ export default () => {
 
   /* Drop Down Menu*/
   const dropDownMenu = divElement.querySelector(".dropdown-menu");
+  dropDownMenu.style.display = "none";
   const addTaskBtn = divElement.querySelector(".add-task-btn");
 
   const toggleDropDownMenu = () => {
-    console.log("toogleVisibility");
-    if (dropDownMenu.style.display === "none") {
+    if (dropDownMenu.style.display == "none") {
       dropDownMenu.style.display = "block";
     } else {
       dropDownMenu.style.display = "none";
