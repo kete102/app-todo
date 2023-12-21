@@ -4,11 +4,11 @@
   border-radius: 25px;
   display: flex;
   flex-direction: column;
+  max-width: 200px;
 }
 
 .task-item:hover .task-trash {
   visibility: visible;
-  transition: all 0.4;
 }
 .task-trash {
   display: flex;
@@ -17,6 +17,9 @@
   align-items: center;
   visibility: hidden;
   gap: 1rem;
+  background: black;
+  color: white;
+  border-radius: 25px;
 }
 
 .task-trash p {
@@ -25,6 +28,7 @@
 
 .task-trash svg {
   width: 30px;
+  stroke: white;
 }
 
 .task-content {
