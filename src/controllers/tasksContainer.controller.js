@@ -13,11 +13,23 @@ export default () => {
   divElement.innerHTML = view;
   const tasksWrapper = divElement.querySelector(".tasks-wrapper");
 
+  //Renderizar las tareas
+  const renderTasks = () => {
+    //Actualizar vista de los nuevos tasks
+    const myTasks = getMyTasksFromLocalStorage();
+    tasksWrapper.innerHTML = "";
+    myTasks.forEach((task) => {
+      tasksWrapper.appendChild(
+        Task(task.name, task.description, task.priority, task.category),
+      );
+    });
+  };
+  renderTasks();
+
   /* Drop Down Menu*/
   const dropDownMenu = divElement.querySelector(".dropdown-menu");
   dropDownMenu.style.display = "none";
   const addTaskBtn = divElement.querySelector(".add-task-btn");
-
   const toggleDropDownMenu = () => {
     if (dropDownMenu.style.display == "none") {
       dropDownMenu.style.display = "block";
@@ -49,15 +61,9 @@ export default () => {
       },
     }).showToast();
 
-    //Actualizar vista de los nuevos tasks
-    const myTasks = getMyTasksFromLocalStorage();
-    tasksWrapper.innerHTML = "";
-    myTasks.forEach((task) => {
-      tasksWrapper.appendChild(
-        Task(task.name, task.description, task.priority, task.category),
-      );
-    });
+    renderTasks();
   });
 
+  const deleteTask = () => {};
   return divElement;
 };

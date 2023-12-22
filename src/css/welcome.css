@@ -1,6 +1,9 @@
 .welcome-section {
   padding: 1rem;
   font-size: 20px;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
 }
 
 #account-name {

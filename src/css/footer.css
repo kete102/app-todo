@@ -1,8 +1,9 @@
 footer {
-  position: relative;
+  position: fixed;
+  bottom: 0;
   width: 100%;
-  margin: auto;
-  padding: 2rem;
+  padding: 2rem 2rem;
+  text-align: center;
 }
 
 .github-anchor {
@@ -11,6 +12,7 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  width: 100%;
 }
 
 .github-anchor p {
