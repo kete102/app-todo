@@ -1,11 +1,12 @@
 import view from "../components/tasksContainer.html";
 import "../css/tasksContainer.css";
-import Task from "./task.controller.js";
+import TaskItem from "./task.controller.js";
 import Toastify from "toastify-js";
 import {
   updateMyTasksInLocalStorage,
   getMyTasksFromLocalStorage,
 } from "../utils/useAddTasks.js";
+import Task from "../utils/task.js";
 
 export default () => {
   const divElement = document.createElement("div");
@@ -20,7 +21,7 @@ export default () => {
     tasksWrapper.innerHTML = "";
     myTasks.forEach((task) => {
       tasksWrapper.appendChild(
-        Task(task.name, task.description, task.priority, task.category),
+        TaskItem(task.name, task.description, task.priority, task.category),
       );
     });
   };
@@ -46,8 +47,9 @@ export default () => {
   const addTaskForm = divElement.querySelector(".dropdown-form");
   addTaskForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    const newTask = Object.fromEntries(new FormData(e.target));
-    updateMyTasksInLocalStorage(newTask);
+    const taskData = Object.fromEntries(new FormData(e.target));
+
+    updateMyTasksInLocalStorage(new Task(taskData));
     addTaskForm.reset();
     toggleDropDownMenu();
     Toastify({

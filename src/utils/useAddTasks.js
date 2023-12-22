@@ -9,8 +9,9 @@ export function updateMyTasksInLocalStorage(newTask) {
     description: newTask.description,
     priority: newTask.priority,
     category: newTask.category,
+    taskID: newTask.taskId,
   };
-
+  console.log(newTaskToAdd);
   myTasks.push(newTaskToAdd);
   localStorage.setItem("myTasks", JSON.stringify(myTasks));
 }
