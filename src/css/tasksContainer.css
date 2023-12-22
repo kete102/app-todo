@@ -1,6 +1,8 @@
 .tasks-container {
   overflow-y: auto;
-  max-height: 35rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .filters {
@@ -27,6 +29,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+  width: 90%;
 }
 
 .add-task-btn {
@@ -50,6 +53,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 16px;
+  max-width: 70rem;
   overflow: auto;
 }
 

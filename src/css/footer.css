@@ -1,8 +1,6 @@
 footer {
-  position: fixed;
+  position: relative;
   width: 100%;
-  bottom: 0;
-  left: 0;
   margin: auto;
   padding: 2rem;
 }

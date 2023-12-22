@@ -8,4 +8,6 @@ body {
   font-family: "Inter", san-serif;
   margin: 2rem 3rem;
   max-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
