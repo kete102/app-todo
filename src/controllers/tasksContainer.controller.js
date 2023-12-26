@@ -14,20 +14,20 @@ export default () => {
   divElement.innerHTML = view;
   const tasksWrapper = divElement.querySelector(".tasks-wrapper");
 
-  //Renderizar las tareas
+  // Renderizar las tareas
   const renderTasks = () => {
-    //Actualizar vista de los nuevos tasks
+    // Actualizar vista de los nuevos tasks
     const myTasks = getMyTasksFromLocalStorage();
     tasksWrapper.innerHTML = "";
     myTasks.forEach((task) => {
       tasksWrapper.appendChild(
-        TaskItem(task.name, task.description, task.priority, task.category),
+        TaskItem(task.name, task.description, task.priority, task.category)
       );
     });
   };
   renderTasks();
 
-  /* Drop Down Menu*/
+  /* Drop Down Menu */
   const dropDownMenu = divElement.querySelector(".dropdown-menu");
   dropDownMenu.style.display = "none";
   const addTaskBtn = divElement.querySelector(".add-task-btn");
@@ -43,7 +43,7 @@ export default () => {
     toggleDropDownMenu();
   });
 
-  /*Add new task from form data*/
+  /* Add new task from form data */
   const addTaskForm = divElement.querySelector(".dropdown-form");
   addTaskForm.addEventListener("submit", (e) => {
     e.preventDefault();
